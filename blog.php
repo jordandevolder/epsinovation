@@ -5,6 +5,7 @@ session_start();
 include_once('Modele/config.php');
 
 include_once('Controleur/Controller.php');
+include_once('Vue/header.php');
 
 try {
     if (isset($_GET['action'])) {
