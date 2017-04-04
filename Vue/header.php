@@ -1,3 +1,6 @@
+<?php
+    include_once('interface.php');
+?>
 <head>
     <meta charset="utf-8"/>
     <title>Use'IT</title>
