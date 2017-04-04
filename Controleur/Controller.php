@@ -1,7 +1,8 @@
 <?php
-/**
- * Created by PhpStorm.
- * User: Jules
- * Date: 04/04/2017
- * Time: 11:54
- */
+include_once('Modele/RequestSQL.php');
+
+function index()
+{
+    $index = index();
+    include_once('vue/index.php');
+}

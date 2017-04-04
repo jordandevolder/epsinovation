@@ -1,7 +1,10 @@
 <?php
-/**
- * Created by PhpStorm.
- * User: Jules
- * Date: 04/04/2017
- * Time: 11:54
- */
+
+function index()
+{
+    global $bdd;
+    //$categoriePrincipale = $bdd->prepare("SELECT * FROM Categorie WHERE id_categorie_pere=".$idCat);
+    //$categoriePrincipale->execute();
+    //$donnees=$categoriePrincipale->fetchAll();
+    //return $donnees;
+}
