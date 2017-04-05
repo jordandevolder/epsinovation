@@ -12,7 +12,7 @@ define("USER_BDD", "root"); // Identifiant pour se connecter à la base de donn�
 define("PASS_BDD", "root"); // MDR de la base de données
 */
 
-define("HOST_BDD", "mysql.hostinger.fr"); // Host de la base de données
+define("HOST_BDD", "localhost"); // Host de la base de données
 define("NAME_BDD", "u120688453_enov"); // Nom de la base de données
 define("USER_BDD", "u120688453_unov"); // Identifiant pour se connecter à la base de données
 define("PASS_BDD", "epsiNnovation&"); // MDR de la base de données*/

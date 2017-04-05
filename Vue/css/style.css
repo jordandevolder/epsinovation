@@ -565,6 +565,17 @@ header {
     border-top-left-radius: 5px;
     border-top-right-radius: 5px;
 }
+a:hover, a:focus {
+    color: white!important;
+    text-decoration: none!important;
+}
+.centered-copyright {
+    position: absolute;
+    width: 100%;
+    text-align: center;
+    bottom: 5px;
+    color: white;
+}
 /*Main CSS*/
 
 
