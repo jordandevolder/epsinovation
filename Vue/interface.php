@@ -59,7 +59,7 @@ function interfaceTop()
                                                 </li>';
                                        
                                 }
-                                        echo '<b class="caret"></b></a>
+                                        echo '</a>
                                     <ul class="dropdown-menu">
                                         <li>
                                             <div class="navbar-content">
