@@ -86,7 +86,6 @@ function interfaceTop()
         <h4 class="modal-title">Connection</h4>
       </div>
       <div class="modal-body">
-
     		<div class="panel panel-default">
 			  	<div class="panel-body">
 			    	<form method="post" accept-charset="UTF-8" role="form" name="connection" action="Controleur/Connect.php">

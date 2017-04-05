@@ -18,7 +18,7 @@ try {
             }
         }
         else if($_GET['action'] == 'connect'){ // Si il n'y a pas d'ID
-           include_once('Vue/connect.php');
+           //include_once('Vue/connect.php');
         }
 
     }
