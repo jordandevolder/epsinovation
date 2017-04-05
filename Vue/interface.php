@@ -93,7 +93,7 @@ function interfaceTop()
     <div class="modal-content">
       <div class="modal-header">
         <button type="button" class="close" style="color: #000000" data-dismiss="modal">&times;</button>
-        <h4 class="modal-title">Connection</h4>
+        <h4 class="modal-title">Connexion</h4>
       </div>
       <div class="modal-body">
     		<div class="panel panel-default">
@@ -106,7 +106,7 @@ function interfaceTop()
 			    		<div class="form-group">
 			    			<input class="form-control" placeholder="Password" name="password" type="password" value="">
 			    		</div>
-			    		<input class="btn btn-lg btn-primary btn-block" type="submit" value="Login" style="color: #0f0f0f">
+			    		<input class="btn btn-lg btn-primary btn-block" type="submit" name="login" value="Login" style="color: #0f0f0f">
 			    	</fieldset>
 			      	</form>
 			    </div>
