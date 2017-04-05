@@ -8,7 +8,12 @@
 
     interfaceTop();
 ?>
-    <h1>Suivez votre glycémie quotidienne</h1>
+    <h1>Suivi de ma glycémie</h1>
+    <?php echo getInjectionsReportsByDay() ?>
+
+    <hr />
+
+    <h1>Suivi des injections d'insuline</h1>
 
 <?php
     interfaceBot();

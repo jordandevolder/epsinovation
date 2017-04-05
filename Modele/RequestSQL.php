@@ -1,8 +1,10 @@
 <?php
 
+include_once('config.php');
+
 function indexTest()
 {
-    global $bdd;
+    //global $bdd;
     //$categoriePrincipale = $bdd->prepare("SELECT * FROM Categorie WHERE id_categorie_pere=".$idCat);
     //$categoriePrincipale->execute();
     //$donnees=$categoriePrincipale->fetchAll();
@@ -17,3 +19,12 @@ function indexTest()
     $donnees=$categoriePrincipale->fetchAll();
     return $donnees;
 }*/
+
+function getInjectionsReportsByDay() {
+    global $bdd;
+    $query = $bdd->prepare("SELECT * FROM reportinjection");
+    $query->execute();
+    $answer=$query->fetch();
+
+    return $answer;
+}
