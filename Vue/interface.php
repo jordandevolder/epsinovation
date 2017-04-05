@@ -19,9 +19,9 @@ function interfaceTop()
                     <li class="active"><a href="#"><i class="fa fa-home" aria-hidden="true"></i><span class="hidden-xs hidden-sm">Accueil</span></a></li>
                     <li><a href="#"><i class="fa fa-tasks" aria-hidden="true"></i><span class="hidden-xs hidden-sm">Workflow</span></a></li>
                     <li><a href="blog.php?action=suivi"><i class="fa fa-bar-chart" aria-hidden="true"></i><span class="hidden-xs hidden-sm">Mon Suivi</span></a></li>
-                    <li><a href="#"><i class="fa fa-user" aria-hidden="true"></i><span class="hidden-xs hidden-sm">Calender</span></a></li>
-                    <li><a href="#"><i class="fa fa-calendar" aria-hidden="true"></i><span class="hidden-xs hidden-sm">Users</span></a></li>
-                    <li><a href="#"><i class="fa fa-cog" aria-hidden="true"></i><span class="hidden-xs hidden-sm">Setting</span></a></li>
+                    <li><a href="#"><i class="fa fa-user" aria-hidden="true"></i><span class="hidden-xs hidden-sm">Utilisateurs</span></a></li>
+                    <li><a href="#"><i class="fa fa-calendar" aria-hidden="true"></i><span class="hidden-xs hidden-sm">Calendrier</span></a></li>
+                    <li><a href="#"><i class="fa fa-cog" aria-hidden="true"></i><span class="hidden-xs hidden-sm">Paramètres</span></a></li>
                 </ul>
             </div>
         </div>
@@ -62,7 +62,7 @@ function interfaceTop()
                                                 </li>';
                                        
                                 }
-                                        echo '<b class="caret"></b></a>
+                                        echo '</a>
                                     <ul class="dropdown-menu">
                                         <li>
                                             <div class="navbar-content">
