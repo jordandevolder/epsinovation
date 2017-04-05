@@ -94,12 +94,14 @@ function interfaceTop()
 			    	<form method="post" accept-charset="UTF-8" role="form" name="connection" action="Controleur/Connect.php">
                     <fieldset>
 			    	  	<div class="form-group">
-			    		    <input class="form-control" placeholder="E-mail" name="email" type="text">
+			    	  	    <label for="email-field">Adresse mail :</label>
+			    		    <input id="email-field" class="form-control" placeholder="E-mail" name="email" type="text">
 			    		</div>
 			    		<div class="form-group">
+			    		    <label for="mdp-field">Mot de passe :</label>
 			    			<input class="form-control" placeholder="Password" name="password" type="password" value="">
 			    		</div>
-			    		<input class="btn btn-lg btn-primary btn-block" type="submit" name="login" value="Se Connecter" style="color: #0f0f0f">
+			    		<input class="btn btn-lg btn-primary btn-block" type="submit" name="login" value="Se Connecter" style="color: white">
 			    	</fieldset>
 			      	</form>
 			    </div>

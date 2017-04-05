@@ -497,6 +497,20 @@ header {
     padding: 10px 15px 26px;
     text-align: right;
 }
+.modal-content {
+    border: none;
+    border-radius: 0;
+}
+.modal-content .panel {
+    border: none;
+}
+.modal-content .panel-body {
+    padding: 0;
+}
+.modal-content fieldset {
+    border: none;
+    margin: 0;
+}
 .cancel {
     background: #0E1A35     ;
     border: medium none;
@@ -506,7 +520,6 @@ header {
     font-weight: 600;
     padding: 10px 30px;
     position: relative;
-
 }
 .modal{
     top: 20%;
