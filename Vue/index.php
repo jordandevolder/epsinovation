@@ -2,6 +2,8 @@
 session_start();
 interfaceTop();
 
+        echo $_SESSION['datas']['id'];
+
 
 
 ?>

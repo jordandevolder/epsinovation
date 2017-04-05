@@ -22,6 +22,14 @@ try {
                 }
             }
         }
+        if ($_GET['action'] == 'user') { // On récupère le nom de l'action
+            if (isset($_SESSION['datas']['id'])) { // Si un Id est passé en param on le récupère pour le param de la requete
+                $idUser = intval($_SESSION['datas']['id']);
+                if ($idUser != 0) {
+                    userProfile($idUser);
+                }
+            }
+        }
 
         else if($_GET['action'] == 'disconnect'){ // Si il n'y a pas d'ID
            include_once('Vue/disconnect.php');
@@ -34,9 +42,6 @@ try {
         }
         else if($_GET['action'] == 'suivi') {
             include_once('Vue/suivi.php');
-        }
-        else if($_GET['action'] == 'user') {
-            include_once('Vue/user.php');
         }
     }
     else {

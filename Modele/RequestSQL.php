@@ -1,5 +1,6 @@
 <?php
 
+
 function indexTest()
 {
     global $bdd;
@@ -17,3 +18,13 @@ function indexTest()
     $donnees=$categoriePrincipale->fetchAll();
     return $donnees;
 }*/
+
+function UserInformation($idUser)
+{
+    global $bdd;
+    $userInformation = $bdd -> prepare("SELECT * FROM user WHERE id = ".$idUser);
+    $userInformation->execute();
+    $donnees = $userInformation->fetchAll();
+    return $donnees;
+
+}
