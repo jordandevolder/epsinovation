@@ -1,4 +1,6 @@
-<?php interfaceTop();
+<?php
+session_start();
+interfaceTop();
 
 
 

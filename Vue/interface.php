@@ -1,4 +1,8 @@
 <?php
+<<<<<<< Updated upstream
+=======
+session_start();
+>>>>>>> Stashed changes
 function interfaceTop()
 {
     echo '<link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-T8Gy5hrqNKT+hzMclPo118YTQO6cYprQmhrYwIiQ/3axmI1hQomh7Ud2hPOy8SP1" crossorigin="anonymous">
@@ -54,10 +58,19 @@ function interfaceTop()
                                                     </a>
                                                 </li>
                                                 </li>';
+<<<<<<< Updated upstream
             echo ' <a class="btn btn-warning" href="blog.php?deconnect=true" onclick="deconnect()">Deconnexion</a></span>';
         }
     }
     echo '</a>
+=======
+                                            echo ' <a class="btn btn-primary" data-toggle="modal" data-target="#connexion">Voir mon profil</a>
+                                                    <a class="btn btn-warning" href="blog.php?action=disconnect">Deconnexion</a></span>';
+
+                                        }
+                                    }
+                                        echo '</a>
+>>>>>>> Stashed changes
                                     <ul class="dropdown-menu">
                                         <li>
                                             <div class="navbar-content">
@@ -160,7 +173,7 @@ function interfaceBot()
 
 <script>
     function deconnect() {
-        <?php session_destroy();?>
+        <?php //session_destroy();?>
         document.location.replace('blog.php');
     }
 </script>
