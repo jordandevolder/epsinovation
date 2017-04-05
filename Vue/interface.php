@@ -51,18 +51,19 @@ function interfaceTop()
                                                                 <a class="btn btn-primary" data-toggle="modal" data-target="#inscription">S\'inscrire</a>
                                         </span>'; }
                                     else {
-                                    echo '
-                                   
-                                        <img src="http://jskrishna.com/work/merkury/images/user-pic.jpg" alt="user">
-                                            <li><a href="#"><i class="fa fa-envelope" aria-hidden="true"></i></a></li>
+                                        if ($_SESSION['datas']['Nickname'] == null) {
+                                            echo '<span class="pull-right" >'. $_SESSION['datas']['nom'].' ';
+                                            echo '<li><a href="#"><i class="fa fa-envelope" aria-hidden="true"></i></a></li>
                                                 <li>
                                                     <a href="#" class="icon-info">
-                                                        <i class="fa fa-bell" aria-hidden="true"></i>                                       
+                                                        <i class="fa fa-bell" aria-hidden="true"></i>
                                                     </a>
                                                 </li>
                                                 </li>';
-                                       
-                                }
+                                            echo ' <a class="btn btn-warning" href="blog.php?deconnect=true" onclick="deconnect()">Deconnexion</a></span>';
+
+                                        }
+                                    }
                                         echo '</a>
                                     <ul class="dropdown-menu">
                                         <li>
@@ -112,7 +113,7 @@ function interfaceTop()
 			    		<div class="form-group">
 			    			<input class="form-control" placeholder="Password" name="password" type="password" value="">
 			    		</div>
-			    		<input class="btn btn-lg btn-primary btn-block" type="submit" name="login" value="Login" style="color: #0f0f0f">
+			    		<input class="btn btn-lg btn-primary btn-block" type="submit" name="login" value="Se Connecter" style="color: #0f0f0f">
 			    	</fieldset>
 			      	</form>
 			    </div>
@@ -123,6 +124,11 @@ function interfaceTop()
 </div>
 
 
+
+
+
+
+
 <div id="inscription" class="modal fade" role="dialog">
   <div class="modal-dialog">
 
@@ -130,20 +136,29 @@ function interfaceTop()
     <div class="modal-content">
       <div class="modal-header">
         <button type="button" class="close" style="color: #000000" data-dismiss="modal">&times;</button>
-        <h4 class="modal-title">Connexion</h4>
+        <h4 class="modal-title">Inscription</h4>
       </div>
       <div class="modal-body">
     		<div class="panel panel-default">
 			  	<div class="panel-body">
-			    	<form method="post" accept-charset="UTF-8" role="form" name="connection" action="Controleur/Connect.php">
+			    	<form method="post" accept-charset="UTF-8" role="form" name="connection" action="Controleur/Register.php">
                     <fieldset>
+                        <div class="form-group">
+			    		    <input class="form-control" placeholder="Nom" name="nom" type="text">
+			    		</div>
+			    		<div class="form-group">
+			    		    <input class="form-control" placeholder="Prénom" name="prenom" type="text">
+			    		</div>
+			    		<div class="form-group">
+			    		    <input class="form-control" placeholder="Téléphone" name="telephone" type="number" size="10">
+			    		</div>
 			    	  	<div class="form-group">
 			    		    <input class="form-control" placeholder="E-mail" name="email" type="text">
 			    		</div>
 			    		<div class="form-group">
 			    			<input class="form-control" placeholder="Password" name="password" type="password" value="">
 			    		</div>
-			    		<input class="btn btn-lg btn-primary btn-block" type="submit" name="login" value="Login" style="color: #0f0f0f">
+			    		<input class="btn btn-lg btn-primary btn-block" type="submit" name="register" value="S\'inscrire" style="color: #0f0f0f">
 			    	</fieldset>
 			      	</form>
 			    </div>
@@ -167,3 +182,11 @@ function interfaceBot()
 }
 ?>
 
+
+
+<script>
+    function deconnect() {
+        <?php session_destroy();?>
+        document.location.replace('blog.php');
+    }
+</script>
