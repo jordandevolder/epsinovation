@@ -33,13 +33,14 @@ if(isset($_POST['telephone']))
 
 if(isset($_POST['register'])){
     $password = sha1($password);
-    echo "ok";
 
-    $respond = $bdd->prepare("INSERT INTO user VALUES (:nom, :prenom, :email, :password, :telephone)");
-    //$respond->execute(array(':nom' => $nom,
+    $respond = $bdd->prepare("INSERT INTO user(nom, prenom, password, email, telephone) VALUES (:nom, :prenom, :email, :password, :telephone)");
+    $respond->execute(array(':nom' => $nom,
                             ':prenom' => $prenom,
                             ':email' => $email,
                             ':password' => $password, 
                             ':telephone' => $telephone));
+
+    echo "<script>document.location.replace('../blog.php');</script>";
 
 }
