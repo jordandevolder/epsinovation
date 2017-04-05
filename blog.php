@@ -52,7 +52,7 @@ try {
 
     }
 
-    include_once 'vue/footer.php';
+    include_once 'Vue/footer.php';
 }
 catch (Exception $e) {
     erreur($e->getMessage());
