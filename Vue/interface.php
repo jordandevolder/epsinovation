@@ -46,7 +46,9 @@ function interfaceTop()
                         <div class="header-rightside">
                             <ul class="list-inline header-top pull-right">';
                                 if(!$_SESSION)
-                                { echo '<span class="pull-right"><a class="btn btn-primary" data-toggle="modal" data-target="#myModal">Se connecter</a>&nbsp;<a class="btn btn-primary" href=\"register.php\">S\'inscrire</a></span>'; }
+                                { echo '<span class="pull-right"><a class="btn btn-primary" data-toggle="modal" data-target="#connexion">Se connecter</a>&nbsp;
+                                                                <a class="btn btn-primary" data-toggle="modal" data-target="#inscription">S\'inscrire</a>
+                                        </span>'; }
                                     else {
                                     echo '
                                    
@@ -56,6 +58,7 @@ function interfaceTop()
                                                     <a href="#" class="icon-info">
                                                         <i class="fa fa-bell" aria-hidden="true"></i>                                       
                                                     </a>
+                                                </li>
                                                 </li>';
                                        
                                 }
@@ -69,6 +72,7 @@ function interfaceTop()
                                                 </div>
                                                 <a href="#" class="view btn-sm active">View Profile</a>
                                             </div>
+                                        </li>
                                        
                                     </ul>
                                 </li>
@@ -76,20 +80,27 @@ function interfaceTop()
                         </div>
                     </div>
                 </header>
-            </div>
+  </div>
+  <div class="user-dashboard">
+</div>
+
             
-            
- <div id="myModal" class="modal fade" role="dialog">
+
+
+
+
+
+
+<div id="connexion" class="modal fade" role="dialog">
   <div class="modal-dialog">
 
     <!-- Modal content-->
     <div class="modal-content">
       <div class="modal-header">
         <button type="button" class="close" style="color: #000000" data-dismiss="modal">&times;</button>
-        <h4 class="modal-title">Connection</h4>
+        <h4 class="modal-title">Connexion</h4>
       </div>
       <div class="modal-body">
-
     		<div class="panel panel-default">
 			  	<div class="panel-body">
 			    	<form method="post" accept-charset="UTF-8" role="form" name="connection" action="Controleur/Connect.php">
@@ -100,21 +111,48 @@ function interfaceTop()
 			    		<div class="form-group">
 			    			<input class="form-control" placeholder="Password" name="password" type="password" value="">
 			    		</div>
-			    		<input class="btn btn-lg btn-primary btn-block" type="submit" value="Login" style="color: #0f0f0f">
+			    		<input class="btn btn-lg btn-primary btn-block" type="submit" name="login" value="Login" style="color: #0f0f0f">
 			    	</fieldset>
 			      	</form>
 			    </div>
 			</div>
 		</div>
 	</div>
+</div> 
 </div>
-      </div>
-    </div>
 
-  </div>
+
+<div id="inscription" class="modal fade" role="dialog">
+  <div class="modal-dialog">
+
+    <!-- Modal content-->
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" style="color: #000000" data-dismiss="modal">&times;</button>
+        <h4 class="modal-title">Connexion</h4>
+      </div>
+      <div class="modal-body">
+    		<div class="panel panel-default">
+			  	<div class="panel-body">
+			    	<form method="post" accept-charset="UTF-8" role="form" name="connection" action="Controleur/Connect.php">
+                    <fieldset>
+			    	  	<div class="form-group">
+			    		    <input class="form-control" placeholder="E-mail" name="email" type="text">
+			    		</div>
+			    		<div class="form-group">
+			    			<input class="form-control" placeholder="Password" name="password" type="password" value="">
+			    		</div>
+			    		<input class="btn btn-lg btn-primary btn-block" type="submit" name="login" value="Login" style="color: #0f0f0f">
+			    	</fieldset>
+			      	</form>
+			    </div>
+			</div>
+		</div>
+	</div>
+</div> 
 </div>
-            
-<div class="user-dashboard">';
+
+';
 }
 
 function interfaceBot()
@@ -126,3 +164,5 @@ function interfaceBot()
 </div>
 </body>';
 }
+?>
+

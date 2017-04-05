@@ -1,5 +1,6 @@
 <?php
     include_once('interface.php');
+    include_once('Controleur/config.php');
 ?>
 <head>
     <meta charset="utf-8"/>

@@ -2,7 +2,7 @@
 
 session_start();
 
-include_once('Modele/config.php');
+include_once('Controleur/config.php');
 
 include_once('Controleur/Controller.php');
 include_once('Vue/header.php');
@@ -18,7 +18,7 @@ try {
             }
         }
         else if($_GET['action'] == 'connect'){ // Si il n'y a pas d'ID
-           include_once('Vue/connect.php');
+           //include_once('Vue/connect.php');
         }
 
     }
