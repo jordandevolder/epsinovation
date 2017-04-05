@@ -1,6 +1,6 @@
 <?php
 
-function index()
+function indexTest()
 {
     global $bdd;
     //$categoriePrincipale = $bdd->prepare("SELECT * FROM Categorie WHERE id_categorie_pere=".$idCat);
