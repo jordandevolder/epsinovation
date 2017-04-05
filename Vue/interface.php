@@ -53,6 +53,7 @@ function interfaceTop()
                                                     <a href="#" class="icon-info">
                                                         <i class="fa fa-bell" aria-hidden="true"></i>                                       
                                                     </a>
+                                                </li>
                                                 </li>';
                                        
                                 }
@@ -66,6 +67,7 @@ function interfaceTop()
                                                 </div>
                                                 <a href="#" class="view btn-sm active">View Profile</a>
                                             </div>
+                                        </li>
                                        
                                     </ul>
                                 </li>
@@ -73,10 +75,18 @@ function interfaceTop()
                         </div>
                     </div>
                 </header>
-            </div>
+  </div>
+  <div class="user-dashboard">
+</div>
+
             
-            
- <div id="myModal" class="modal fade" role="dialog">
+
+
+
+
+
+
+<div id="myModal" class="modal fade" role="dialog">
   <div class="modal-dialog">
 
     <!-- Modal content-->
@@ -103,14 +113,10 @@ function interfaceTop()
 			</div>
 		</div>
 	</div>
+</div> 
 </div>
-      </div>
-    </div>
 
-  </div>
-</div>
-            
-<div class="user-dashboard">';
+';
 }
 
 function interfaceBot()
@@ -122,3 +128,5 @@ function interfaceBot()
 </div>
 </body>';
 }
+?>
+
