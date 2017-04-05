@@ -34,7 +34,7 @@ if(isset($_POST['telephone']))
 if(isset($_POST['register'])){
     $password = sha1($password);
 
-    $respond = $bdd->prepare("INSERT INTO user(nom, prenom, password, email, telephone) VALUES (:nom, :prenom, :email, :password, :telephone)");
+    $respond = $bdd->prepare("INSERT INTO user(nom, prenom, password, email, telephone) VALUES (:nom, :prenom, :password, :email, :telephone)");
     $respond->execute(array(':nom' => $nom,
                             ':prenom' => $prenom,
                             ':email' => $email,

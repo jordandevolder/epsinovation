@@ -24,7 +24,6 @@ if(isset($_POST['login'])) {
     $connected = 1;
     while ($donnees && $connected != 2) {
         $password = sha1($password);
-
         if($password == $donnees['password'])
         {
             $_SESSION['datas'] = $donnees;
@@ -36,10 +35,12 @@ if(isset($_POST['login'])) {
         {
             $connected = 2;
             echo "<script language='JavaScript'>alert(\"Erreur de connexion\")</script>";
+            echo "<script>document.location.replace('../blog.php');</script>";
         }
     }
     if ($connected==1)
     {
         echo "<script language='JavaScript'>alert(\"Le compte n'existe pas\")</script>";
+        echo "<script>document.location.replace('../blog.php');</script>";
     }
 }
