@@ -23,13 +23,17 @@ try {
             }
         }
         if ($_GET['action'] == 'user') { // On récupère le nom de l'action
+            /*if() {
+
+            }*/
             if (isset($_SESSION['datas']['id'])) { // Si un Id est passé en param on le récupère pour le param de la requete
                 $idUser = intval($_SESSION['datas']['id']);
                 if ($idUser != 0) {
                     userProfile($idUser);
                 }
-            } else {
                 include_once('Vue/user.php');
+            } else {
+                include_once('Vue/connection.php');
             }
         }
 

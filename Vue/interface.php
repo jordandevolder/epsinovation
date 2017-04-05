@@ -12,7 +12,7 @@ function interfaceTop()
             <div class="navi">
                 <ul>
                     <li class="epsinnovation-logo">
-                        <img src="Vue/img/LOGO.png" class="logo"/>
+                        <img src="Vue/img/logo.png" class="logo"/>
                     </li>
                     <li id="blog-link"><a href="blog.php"><i class="fa fa-home" aria-hidden="true"></i><span class="hidden-xs hidden-sm">Accueil</span></a></li>
                     <li id="suivi-link"><a href="blog.php?action=suivi"><i class="fa fa-bar-chart" aria-hidden="true"></i><span class="hidden-xs hidden-sm">Mon Suivi</span></a></li>

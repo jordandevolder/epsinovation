@@ -534,6 +534,13 @@ a:hover, a:focus {
     bottom: 5px;
     color: white;
 }
+.welcome-page-title,
+.ask-for-connection-title {
+    display: block;
+    text-align: center;
+    margin-top: 150px;
+    font-size: 3em;
+}
 /*Main CSS*/
 
 
@@ -689,22 +696,6 @@ a:hover, a:focus {
         width: 100%;
     }
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 .user-row {
     margin-bottom: 14px;
