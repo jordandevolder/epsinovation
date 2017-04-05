@@ -30,7 +30,6 @@ function getInjectionsReportsByDay() {
     } else {
         return null;
     }
-
 }
 
 function getGlycemieReportsByDay() {

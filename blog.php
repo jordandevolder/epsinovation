@@ -28,6 +28,8 @@ try {
                 if ($idUser != 0) {
                     userProfile($idUser);
                 }
+            } else {
+                include_once('Vue/user.php');
             }
         }
 
@@ -36,9 +38,6 @@ try {
         }
         else if($_GET['action'] == 'mentions') {
             include_once('Vue/mentionsLegales.php');
-        }
-        else if($_GET['action'] == 'accueil') {
-            include_once('Vue/accueil.php');
         }
         else if($_GET['action'] == 'suivi') {
             include_once('Vue/suivi.php');
