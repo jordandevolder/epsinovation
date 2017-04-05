@@ -17,8 +17,8 @@ try {
                 }
             }
         }
-        else if($_GET['action'] == 'myDaily'){ // Si il n'y a pas d'ID
-           // getAllNews();
+        else if($_GET['action'] == 'connect'){ // Si il n'y a pas d'ID
+           include_once('Vue/connect.php');
         }
 
     }

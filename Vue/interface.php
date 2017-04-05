@@ -1,4 +1,5 @@
 <?php
+
 function interfaceTop()
 {
     echo '<link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-T8Gy5hrqNKT+hzMclPo118YTQO6cYprQmhrYwIiQ/3axmI1hQomh7Ud2hPOy8SP1" crossorigin="anonymous">
@@ -7,15 +8,14 @@ function interfaceTop()
     <div class="row display-table-row">
         <div class="col-md-2 col-sm-1 hidden-xs display-table-cell v-align box" id="navigation">
             <div class="logo">
-                <a hef="home.html"><img src="http://jskrishna.com/work/merkury/images/logo.png" alt="merkery_logo" class="hidden-xs hidden-sm">
-                    <img src="http://jskrishna.com/work/merkury/images/circle-logo.png" alt="merkery_logo" class="visible-xs visible-sm circle-logo">
-                </a>
+
+
             </div>
             <div class="navi">
                 <ul>
-                    <li class="active"><a href="#"><i class="fa fa-home" aria-hidden="true"></i><span class="hidden-xs hidden-sm">Home</span></a></li>
+                    <li class="active"><a href="#"><i class="fa fa-home" aria-hidden="true"></i><span class="hidden-xs hidden-sm">Accueil</span></a></li>
                     <li><a href="#"><i class="fa fa-tasks" aria-hidden="true"></i><span class="hidden-xs hidden-sm">Workflow</span></a></li>
-                    <li><a href="#"><i class="fa fa-bar-chart" aria-hidden="true"></i><span class="hidden-xs hidden-sm">Statistics</span></a></li>
+                    <li><a href="blog.php?action=suivi"><i class="fa fa-bar-chart" aria-hidden="true"></i><span class="hidden-xs hidden-sm">Mon Suivi</span></a></li>
                     <li><a href="#"><i class="fa fa-user" aria-hidden="true"></i><span class="hidden-xs hidden-sm">Calender</span></a></li>
                     <li><a href="#"><i class="fa fa-calendar" aria-hidden="true"></i><span class="hidden-xs hidden-sm">Users</span></a></li>
                     <li><a href="#"><i class="fa fa-cog" aria-hidden="true"></i><span class="hidden-xs hidden-sm">Setting</span></a></li>
@@ -37,35 +37,36 @@ function interfaceTop()
                                 </button>
                             </div>
                         </nav>
-                        <div class="search hidden-xs hidden-sm">
-                            <input type="text" placeholder="Search" id="search">
-                        </div>
+
                     </div>
                     <div class="col-md-5">
                         <div class="header-rightside">
-                            <ul class="list-inline header-top pull-right">
-                                <li class="hidden-xs"><a href="#" class="add-project" data-toggle="modal" data-target="#add_project">Add Project</a></li>
-                                <li><a href="#"><i class="fa fa-envelope" aria-hidden="true"></i></a></li>
-                                <li>
-                                    <a href="#" class="icon-info">
-                                        <i class="fa fa-bell" aria-hidden="true"></i>
-                                        <span class="label label-primary">3</span>
-                                    </a>
-                                </li>
-                                <li class="dropdown">
-                                    <a href="#" class="dropdown-toggle" data-toggle="dropdown"><img src="http://jskrishna.com/work/merkury/images/user-pic.jpg" alt="user">
-                                        <b class="caret"></b></a>
+                            <ul class="list-inline header-top pull-right">';
+                                if(!$_SESSION)
+                                { echo '<span class="pull-right"><a class="btn btn-primary" data-toggle="modal" data-target="#myModal">Se connecter</a>&nbsp;<a class="btn btn-primary" href=\"register.php\">S\'inscrire</a></span>'; }
+                                    else {
+                                    echo '
+                                   
+                                        <img src="http://jskrishna.com/work/merkury/images/user-pic.jpg" alt="user">
+                                            <li><a href="#"><i class="fa fa-envelope" aria-hidden="true"></i></a></li>
+                                                <li>
+                                                    <a href="#" class="icon-info">
+                                                        <i class="fa fa-bell" aria-hidden="true"></i>                                       
+                                                    </a>
+                                                </li>';
+                                       
+                                }
+                                        echo '<b class="caret"></b></a>
                                     <ul class="dropdown-menu">
                                         <li>
                                             <div class="navbar-content">
                                                 <span>JS Krishna</span>
-                                                <p class="text-muted small">
-</p>
+                                                <p class="text-muted small"></p>
                                                 <div class="divider">
                                                 </div>
                                                 <a href="#" class="view btn-sm active">View Profile</a>
                                             </div>
-                                        </li>
+                                       
                                     </ul>
                                 </li>
                             </ul>
@@ -73,7 +74,44 @@ function interfaceTop()
                     </div>
                 </header>
             </div>
-            <div class="user-dashboard">';
+            
+            
+ <div id="myModal" class="modal fade" role="dialog">
+  <div class="modal-dialog">
+
+    <!-- Modal content-->
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" style="color: #000000" data-dismiss="modal">&times;</button>
+        <h4 class="modal-title">Connection</h4>
+      </div>
+      <div class="modal-body">
+
+    		<div class="panel panel-default">
+			  	<div class="panel-body">
+			    	<form method="post" accept-charset="UTF-8" role="form" name="connection" action="Controleur/Connect.php">
+                    <fieldset>
+			    	  	<div class="form-group">
+			    		    <input class="form-control" placeholder="E-mail" name="email" type="text">
+			    		</div>
+			    		<div class="form-group">
+			    			<input class="form-control" placeholder="Password" name="password" type="password" value="">
+			    		</div>
+			    		<input class="btn btn-lg btn-primary btn-block" type="submit" value="Login" style="color: #0f0f0f">
+			    	</fieldset>
+			      	</form>
+			    </div>
+			</div>
+		</div>
+	</div>
+</div>
+      </div>
+    </div>
+
+  </div>
+</div>
+            
+<div class="user-dashboard">';
 }
 
 function interfaceBot()
