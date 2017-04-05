@@ -13,6 +13,9 @@ function interfaceTop()
             </div>
             <div class="navi">
                 <ul>
+                    <li class="epsinnovation-logo">
+                        <img src="Vue/img/LOGO.png" class="logo"/>
+                    </li>
                     <li class="active"><a href="#"><i class="fa fa-home" aria-hidden="true"></i><span class="hidden-xs hidden-sm">Accueil</span></a></li>
                     <li><a href="#"><i class="fa fa-tasks" aria-hidden="true"></i><span class="hidden-xs hidden-sm">Workflow</span></a></li>
                     <li><a href="blog.php?action=suivi"><i class="fa fa-bar-chart" aria-hidden="true"></i><span class="hidden-xs hidden-sm">Mon Suivi</span></a></li>
