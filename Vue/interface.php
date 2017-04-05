@@ -6,7 +6,7 @@ function interfaceTop()
 <body class="home">
 <div class="container-fluid display-table">
     <div class="row display-table-row">
-        <div class="col-md-2 col-sm-1 hidden-xs display-table-cell v-align box" id="navigation">
+        <div class="col-md-2 col-sm-1 hidden-xs display-table-cell v-align box left-page-part" id="navigation">
             <div class="logo">
             </div>
             <div class="navi">
@@ -22,7 +22,7 @@ function interfaceTop()
                 </ul>
             </div>
         </div>
-        <div class="col-md-10 col-sm-11 display-table-cell v-align">
+        <div class="col-md-10 col-sm-11 display-table-cell v-align right-page-part">
             <!--<button type="button" class="slide-toggle">Slide Toggle</button> -->
             <div class="row">
                 <header>

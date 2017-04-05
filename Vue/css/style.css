@@ -4,6 +4,12 @@ a:focus,a:hover,a{
     outline:none;
     text-decoration: none;
 }
+.left-page-part {
+    position: fixed;
+}
+.display-table-cell.v-align.right-page-part {
+    float: right;
+}
 .epsinnovation-logo {
     width: 100%;
 }
@@ -12,6 +18,9 @@ a:focus,a:hover,a{
     margin-left: auto;
     margin-right: auto;
     padding-bottom: 10px;
+}
+.table {
+    margin-bottom: 0;
 }
 li,ul{
     list-style: none;
@@ -553,6 +562,22 @@ a:hover, a:focus {
     text-align: center;
     margin-top: 150px;
     font-size: 3em;
+}
+.glyph-container {
+    cursor: pointer;
+}
+.custom-table {
+    margin: 0;
+    width: 100%;
+}
+.custom-table .panel.panel-info {
+    border: none;
+    border-radius: 0;
+}
+.custom-table .panel.panel-info .panel-heading {
+    color: white;
+    background: #00A8CB;
+    border-radius: 0;
 }
 /*Main CSS*/
 
