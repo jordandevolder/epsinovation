@@ -24,7 +24,15 @@ function getInjectionsReportsByDay() {
     global $bdd;
     $query = $bdd->prepare("SELECT * FROM reportinjection");
     $query->execute();
-    $answer=$query->fetch();
-
+    $answer=$query->fetchAll();
     return $answer;
+}
+
+function UserInformation($idUser)
+{
+    global $bdd;
+    $userInformation = $bdd -> prepare("SELECT * FROM user WHERE id = ".$idUser);
+    $userInformation->execute();
+    $donnees = $userInformation->fetchAll();
+    return $donnees;
 }

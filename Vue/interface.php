@@ -1,4 +1,6 @@
 <?php
+
+session_start();
 function interfaceTop()
 {
     echo '<link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-T8Gy5hrqNKT+hzMclPo118YTQO6cYprQmhrYwIiQ/3axmI1hQomh7Ud2hPOy8SP1" crossorigin="anonymous">
@@ -13,7 +15,7 @@ function interfaceTop()
                     <li class="epsinnovation-logo">
                         <img src="Vue/img/LOGO.png" class="logo"/>
                     </li>
-                    <li class="active"><a href="blog.php?action=accueil"><i class="fa fa-home" aria-hidden="true"></i><span class="hidden-xs hidden-sm">Accueil</span></a></li>
+                    <li class="active"><a href="blog.php"><i class="fa fa-home" aria-hidden="true"></i><span class="hidden-xs hidden-sm">Accueil</span></a></li>
                     <li><a href="blog.php?action=suivi"><i class="fa fa-bar-chart" aria-hidden="true"></i><span class="hidden-xs hidden-sm">Mon Suivi</span></a></li>
                     <li><a href="blog.php?action=user"><i class="fa fa-user" aria-hidden="true"></i><span class="hidden-xs hidden-sm">Gestion du compte</span></a></li>
                     <li><a href="blog.php?action=mentions"><i class="fa fa-file-text-o" aria-hidden="true"></i><span class="hidden-xs hidden-sm">Mentions légales</span></a></li>
@@ -54,10 +56,10 @@ function interfaceTop()
                                                     </a>
                                                 </li>
                                                 </li>';
-            echo ' <a class="btn btn-warning" href="blog.php?deconnect=true" onclick="deconnect()">Deconnexion</a></span>';
+
+            echo ' <a class="btn btn-warning" href="blog.php?action=disconnect">Deconnexion</a></span>';
         }
-    }
-    echo '</a>
+    }echo '</a>
                                     <ul class="dropdown-menu">
                                         <li>
                                             <div class="navbar-content">
@@ -160,7 +162,7 @@ function interfaceBot()
 
 <script>
     function deconnect() {
-        <?php session_destroy();?>
+        <?php //session_destroy();?>
         document.location.replace('blog.php');
     }
 </script>
