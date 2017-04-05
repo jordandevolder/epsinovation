@@ -4,7 +4,6 @@
 ?>
 <head>
     <meta charset="utf-8"/>
-    <title>Use'IT</title>
     <link href="vue/css/bootstrap.css" rel="stylesheet" type="text/css"/>
     <link href="vue/css/normalize.css" rel="stylesheet" type="text/css"/>
     <link href="vue/css/style.css" rel="stylesheet" type="text/css"/>

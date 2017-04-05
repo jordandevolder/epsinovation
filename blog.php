@@ -20,6 +20,9 @@ try {
         else if($_GET['action'] == 'connect'){ // Si il n'y a pas d'ID
            //include_once('Vue/connect.php');
         }
+        else if($_GET['action'] == 'mentions') {
+            include_once('Vue/mentionsLegales.php');
+        }
 
     }
     else {

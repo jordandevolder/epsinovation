@@ -21,7 +21,7 @@ function interfaceTop()
                     <li><a href="#"><i class="fa fa-user" aria-hidden="true"></i><span class="hidden-xs hidden-sm">Utilisateurs</span></a></li>
                     <li><a href="#"><i class="fa fa-calendar" aria-hidden="true"></i><span class="hidden-xs hidden-sm">Calendrier</span></a></li>
                     <li><a href="#"><i class="fa fa-cog" aria-hidden="true"></i><span class="hidden-xs hidden-sm">Paramètres</span></a></li>
-                    <li><a href="#"><i class="fa fa-file-text-o" aria-hidden="true"></i><span class="hidden-xs hidden-sm">Mentions légales</span></a></li>
+                    <li><a href="blog.php?action=mentions"><i class="fa fa-file-text-o" aria-hidden="true"></i><span class="hidden-xs hidden-sm">Mentions légales</span></a></li>
                     <li><span class="centered-copyright">&copy; 2017 EPSInnovation</span></li>
                 </ul>
             </div>
@@ -46,12 +46,12 @@ function interfaceTop()
                     <div class="col-md-5">
                         <div class="header-rightside">
                             <ul class="list-inline header-top pull-right">';
-                                if(!$_SESSION)
-                                { echo '<span class="pull-right"><a class="btn btn-primary" data-toggle="modal" data-target="#connexion">Se connecter</a>&nbsp;
+    if(!$_SESSION)
+    { echo '<span class="pull-right"><a class="btn btn-primary" data-toggle="modal" data-target="#connexion">Se connecter</a>&nbsp;
                                                                 <a class="btn btn-primary" data-toggle="modal" data-target="#inscription">S\'inscrire</a>
                                         </span>'; }
-                                    else {
-                                    echo '
+    else {
+        echo '
                                    
                                         <img src="http://jskrishna.com/work/merkury/images/user-pic.jpg" alt="user">
                                             <li><a href="#"><i class="fa fa-envelope" aria-hidden="true"></i></a></li>
@@ -61,9 +61,9 @@ function interfaceTop()
                                                     </a>
                                                 </li>
                                                 </li>';
-                                       
-                                }
-                                        echo '</a>
+
+    }
+    echo '</a>
                                     <ul class="dropdown-menu">
                                         <li>
                                             <div class="navbar-content">

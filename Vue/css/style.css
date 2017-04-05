@@ -96,9 +96,11 @@ li,ul{
     margin-top: 0;
     margin-bottom: 20px;
 }
-
-.login-inner h1 span {
-    color: #5584ff;
+h1 {
+    color: #0e1a35;
+}
+h3 {
+    color: #00A8CB;
 }
 
 .login-form {
