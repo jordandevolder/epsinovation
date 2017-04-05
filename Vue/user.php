@@ -7,8 +7,6 @@
  */
 
     interfaceTop();
-
-
 ?>
     <h1>Gestion du compte</h1>
 

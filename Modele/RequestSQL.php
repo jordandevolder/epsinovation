@@ -2,8 +2,7 @@
 
 include_once('config.php');
 
-function indexTest()
-{
+function indexTest() {
     //global $bdd;
     //$categoriePrincipale = $bdd->prepare("SELECT * FROM Categorie WHERE id_categorie_pere=".$idCat);
     //$categoriePrincipale->execute();
@@ -11,8 +10,7 @@ function indexTest()
     //return $donnees;
 }
 
-/*function getInfoByMail($email)
-{
+/*function getInfoByMail($email) {
     global $bdd;
     $categoriePrincipale = $bdd->prepare("SELECT * FROM user WHERE email=".$email);
     $categoriePrincipale->execute();
@@ -22,14 +20,28 @@ function indexTest()
 
 function getInjectionsReportsByDay() {
     global $bdd;
-    $query = $bdd->prepare("SELECT * FROM reportinjection");
-    $query->execute();
+    if(isset($_SESSION['datas']['id'])) {
+        $currentDate = date('Y-m-d H:i:s');
+        $query = $bdd->prepare("SELECT * FROM reportinjection WHERE id=:id AND heure=:heure");
+        $query->execute(array(':id' => $_SESSION['datas']['id'],
+            ':heure' => $currentDate));
+        $answer=$query->fetchAll();
+        return $answer;
+    } else {
+        return null;
+    }
+
+}
+
+function getGlycemieReportsByDay() {
+    global $bdd;
+    $query = $bdd->prepare("SELECT * FROM reportinjection WHERE id=:id");
+    $query->execute(array(':id' => $_SESSION['datas']['id']));
     $answer=$query->fetchAll();
     return $answer;
 }
 
-function UserInformation($idUser)
-{
+function UserInformation($idUser) {
     global $bdd;
     $userInformation = $bdd -> prepare("SELECT * FROM user WHERE id = ".$idUser);
     $userInformation->execute();

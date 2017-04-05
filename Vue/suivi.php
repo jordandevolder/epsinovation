@@ -9,7 +9,10 @@
     interfaceTop();
 ?>
     <h1>Suivi de ma glycémie</h1>
-    <?php echo getInjectionsReportsByDay() ?>
+    <?php
+        getInjectionsReportsByDay();
+
+    ?>
 
     <hr />
 
