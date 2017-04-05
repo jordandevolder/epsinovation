@@ -22,6 +22,7 @@ function interfaceTop()
                     <li><a href="#"><i class="fa fa-user" aria-hidden="true"></i><span class="hidden-xs hidden-sm">Utilisateurs</span></a></li>
                     <li><a href="#"><i class="fa fa-calendar" aria-hidden="true"></i><span class="hidden-xs hidden-sm">Calendrier</span></a></li>
                     <li><a href="#"><i class="fa fa-cog" aria-hidden="true"></i><span class="hidden-xs hidden-sm">Paramètres</span></a></li>
+                    <li><a href="#"><i class="fa fa-cog" aria-hidden="true"></i><span class="hidden-xs hidden-sm">Mentions légales</span></a></li>
                 </ul>
             </div>
         </div>
