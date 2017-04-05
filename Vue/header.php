@@ -1,6 +1,7 @@
 <?php
     include_once('interface.php');
-    include_once('Controleur/config.php');
+    include_once('Modele/config.php');
+    //session_start();
 ?>
 <head>
     <meta charset="utf-8"/>

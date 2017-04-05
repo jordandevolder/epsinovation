@@ -8,3 +8,12 @@ function indexTest()
     //$donnees=$categoriePrincipale->fetchAll();
     //return $donnees;
 }
+
+/*function getInfoByMail($email)
+{
+    global $bdd;
+    $categoriePrincipale = $bdd->prepare("SELECT * FROM user WHERE email=".$email);
+    $categoriePrincipale->execute();
+    $donnees=$categoriePrincipale->fetchAll();
+    return $donnees;
+}*/
