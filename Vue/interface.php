@@ -15,10 +15,8 @@ function interfaceTop()
                     </li>
                     <li class="active"><a href="blog.php?action=accueil"><i class="fa fa-home" aria-hidden="true"></i><span class="hidden-xs hidden-sm">Accueil</span></a></li>
                     <li><a href="blog.php?action=suivi"><i class="fa fa-bar-chart" aria-hidden="true"></i><span class="hidden-xs hidden-sm">Mon Suivi</span></a></li>
-                    <li><a href="#"><i class="fa fa-user" aria-hidden="true"></i><span class="hidden-xs hidden-sm">Utilisateurs</span></a></li>
-                    <li><a href="#"><i class="fa fa-calendar" aria-hidden="true"></i><span class="hidden-xs hidden-sm">Calendrier</span></a></li>
-                    <li><a href="#"><i class="fa fa-cog" aria-hidden="true"></i><span class="hidden-xs hidden-sm">Paramètres</span></a></li>
-                    <li><a href="#"><i class="fa fa-file-text-o" aria-hidden="true"></i><span class="hidden-xs hidden-sm">Mentions légales</span></a></li>
+                    <li><a href="blog.php?action=user"><i class="fa fa-user" aria-hidden="true"></i><span class="hidden-xs hidden-sm">Gestion du compte</span></a></li>
+                    <li><a href="blog.php?action=mentions"><i class="fa fa-file-text-o" aria-hidden="true"></i><span class="hidden-xs hidden-sm">Mentions légales</span></a></li>
                     <li><span class="centered-copyright">&copy; 2017 EPSInnovation</span></li>
                 </ul>
             </div>

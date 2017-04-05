@@ -26,6 +26,9 @@ try {
         else if($_GET['action'] == 'suivi') {
             include_once('Vue/suivi.php');
         }
+        else if($_GET['action'] == 'user') {
+            include_once('Vue/user.php');
+        }
     }
     else {
         index();
