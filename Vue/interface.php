@@ -14,7 +14,7 @@ function interfaceTop()
                     <li class="epsinnovation-logo">
                         <img src="Vue/img/LOGO.png" class="logo"/>
                     </li>
-                    <li class="active"><a href="blog.php"><i class="fa fa-home" aria-hidden="true"></i><span class="hidden-xs hidden-sm">Accueil</span></a></li>
+                    <li><a href="blog.php"><i class="fa fa-home" aria-hidden="true"></i><span class="hidden-xs hidden-sm">Accueil</span></a></li>
                     <li><a href="blog.php?action=suivi"><i class="fa fa-bar-chart" aria-hidden="true"></i><span class="hidden-xs hidden-sm">Mon Suivi</span></a></li>
                     <li><a href="blog.php?action=user"><i class="fa fa-user" aria-hidden="true"></i><span class="hidden-xs hidden-sm">Gestion du compte</span></a></li>
                     <li><a href="blog.php?action=mentions"><i class="fa fa-file-text-o" aria-hidden="true"></i><span class="hidden-xs hidden-sm">Mentions légales</span></a></li>
