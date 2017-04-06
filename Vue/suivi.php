@@ -31,7 +31,7 @@
         ]);
 
         var options = {
-          title: 'Company Performance',
+          title: 'graphique Glycemie',
           hAxis: {title: 'Year',  titleTextStyle: {color: '#333'}},
           vAxis: {minValue: 0}
         };
