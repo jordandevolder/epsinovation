@@ -48,7 +48,6 @@ function interfaceTop()
     else {
         if ($_SESSION['datas']['nom'] != null) {
             echo '<span class="pull-right" >'. $_SESSION['datas']['nom'].' ';
-
             echo ' <a class="btn btn-warning" href="blog.php?action=disconnect">Deconnexion</a></span>';
         }
     }echo '</a>
