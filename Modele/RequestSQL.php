@@ -22,7 +22,7 @@ function getInjectionsReportsByDay() {
     if(isset($_SESSION['datas']['id'])) {
         global $bdd;
         //$currentDate = date('Y-m-d H:i:s');
-        $query = $bdd->prepare("SELECT * FROM reportinjection WHERE id=:id");
+        $query = $bdd->prepare("SELECT * FROM reportinjection WHERE user_id=:id");
         $query->execute(array(':id' => $_SESSION['datas']['id']));
         $answer=$query->fetchAll();
         return $answer;
