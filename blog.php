@@ -36,6 +36,9 @@ try {
                 include_once('Vue/connection.php');
             }
         }
+        if ($_GET['action'] == 'planif'){
+            include_once('Vue/planif.php');
+        }
 
         else if($_GET['action'] == 'disconnect'){ // Si il n'y a pas d'ID
            include_once('Vue/disconnect.php');
