@@ -114,7 +114,7 @@ function interfaceTop()
       <div class="modal-body">
     		<div class="panel panel-default">
 			  	<div class="panel-body">
-			    	<form method="post" accept-charset="UTF-8" role="form" name="connection" action="Controleur/Register.php">
+			    	<form method="post" accept-charset="UTF-8" enctype="multipart/form-data" role="form" name="connection" action="Controleur/Register.php">
                     <fieldset>
                         <div class="form-group">
 			    		    <input class="form-control" placeholder="Nom" name="nom" type="text">
@@ -122,6 +122,9 @@ function interfaceTop()
 			    		<div class="form-group">
 			    		    <input class="form-control" placeholder="Prénom" name="prenom" type="text">
 			    		</div>
+			    		 <div class="form-group col-xs-12">
+                            Choisir une photo de profil : <input class="form-control" name="image" type="file" accept="image/*" />
+                        </div>
 			    		<div class="form-group">
 			    		    <input class="form-control" placeholder="Téléphone" name="telephone" type="number" size="10">
 			    		</div>
