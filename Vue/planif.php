@@ -24,7 +24,7 @@
                 </div>
             </div>
         </div>
-        <script type="text/javascript" src="Vue/js/bootstrap.js">
+        <script type="text/javascript">
             $(function () {
                 $('#datetimepicker1').datetimepicker();
             });
