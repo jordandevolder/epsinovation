@@ -25,7 +25,6 @@
                     <div class="panel-body">
                         <div class="row">
                             <div class=" col-md-12 col-lg-12 ">
-                            <div class="col-md-3 col-lg-3 " align="center"> <img alt="User Pic" src="http://babyinfoforyou.com/wp-content/uploads/2014/10/avatar-300x300.png" class="img-circle img-responsive"> </div>
 
                             <div class=" col-md-9 col-lg-9 ">
                                 <table class="table table-user-information">
@@ -33,12 +32,10 @@
                                         <tr>
                                             <td>Adresse mail :</td>
                                             <td><?php echo $_SESSION['datas']['email'] ?></td>
-                                            <td><span class="glyph-container fa fa-edit"/></td>
                                         </tr>
                                         <tr>
                                             <td>Numéro de téléphone :</td>
                                             <td><?php echo $_SESSION['datas']['telephone'] ?></td>
-                                            <td><span class="glyph-container fa fa-edit"/></td>
                                         </tr>
                                     </tbody>
                                 </table>

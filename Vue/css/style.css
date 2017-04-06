@@ -27,7 +27,8 @@ li,ul{
     padding: 0;
     margin: 0;
 }
-.btn-primary {
+.btn-primary,
+.btn-warning {
     border-radius: 0;
 }
 .header-top i {
@@ -340,38 +341,31 @@ header {
     margin-right: 15px;
     color: #5584ff;
 }
-
 .navi .active a {
     background: #122143;
     border-left: 5px solid #5584ff;
     padding-left: 15px;
 }
-
 .navi a:hover {
     background: #122143 none repeat scroll 0 0;
     border-left: 5px solid #5584ff;
     display: block;
     padding-left: 15px;
 }
-
 .navbar-default {
     background-color: #ffffff;
     border-color: #ffffff;
 }
-
 .navbar-toggle {
     border: none;
 }
-
 .navbar-default .navbar-toggle:focus,
 .navbar-default .navbar-toggle:hover {
     background-color: rgba(0, 0, 0, 0);
 }
-
 .navbar-default .navbar-toggle .icon-bar {
     background-color: #0e1a35;
 }
-
 .circle-logo {
     margin: 0 auto;
     max-width: 30px !important;
@@ -383,11 +377,9 @@ header {
     -o-transition: all 0.5s ease;
     transition: all 0.5s ease;
 }
-
 .user-dashboard {
     padding: 0 20px;
 }
-
 .user-dashboard h1 {
     color: #0e1a35;
     font-size: 30px;
@@ -411,7 +403,6 @@ header {
     padding-right: 32px;
     color: #0e1a35;
 }
-
 .sales button::before {
     content: "";
     font-family: FontAwesome;
@@ -563,9 +554,6 @@ a:hover, a:focus {
     margin-top: 150px;
     font-size: 3em;
 }
-.glyph-container {
-    cursor: pointer;
-}
 .custom-table {
     margin: 0;
     width: 100%;
@@ -578,6 +566,10 @@ a:hover, a:focus {
     color: white;
     background: #00A8CB;
     border-radius: 0;
+}
+.col-lg-12,
+.col-lg-9{
+    width: 100%;
 }
 /*Main CSS*/
 
@@ -693,7 +685,6 @@ a:hover, a:focus {
         padding: 0;
     }
 }
-
 @media only screen and (max-device-width: 992px) {
     header .header-top li {
         padding-left: 20px !important;
@@ -702,9 +693,7 @@ a:hover, a:focus {
     header .logo img {
         max-width: 125px !important;
     }
-
 }
-
 @media only screen and (min-device-width: 767px) and (max-device-width: 998px){
     .user-dashboard .header-top {
         padding-top: 5px;
@@ -734,37 +723,29 @@ a:hover, a:focus {
         width: 100%;
     }
 }
-
 .user-row {
     margin-bottom: 14px;
 }
-
 .user-row:last-child {
     margin-bottom: 0;
 }
-
 .dropdown-user {
     margin: 13px 0;
     padding: 5px;
     height: 100%;
 }
-
 .dropdown-user:hover {
     cursor: pointer;
 }
-
 .table-user-information > tbody > tr {
     border-top: 1px solid rgb(221, 221, 221);
 }
-
 .table-user-information > tbody > tr:first-child {
     border-top: 0;
 }
-
-
 .table-user-information > tbody > tr > td {
     border-top: 0;
 }
-.toppad
-{margin-top:20px;
+.toppad {
+    margin-top:20px;
 }
