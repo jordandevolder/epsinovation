@@ -65,7 +65,7 @@ function getMedecin()
 function getInfoMedecinByIdUser($idUser)
 {
     global $bdd;
-    $information = $bdd->prepare("SELECT * FROM medecin join user on medecin.id = user.id_medecin WHERE user.id = ".$idUser);
+    $information = $bdd->prepare("SELECT * FROM medecin WHERE id = (SELECT id_medecin from user where id = $idUser)");
     $information->execute();
     $donnees = $information->fetchAll();
     return $donnees;

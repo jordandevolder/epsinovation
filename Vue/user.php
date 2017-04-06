@@ -34,26 +34,38 @@
                                         </tr>
                                         <tr>
                                                 <td>Mon Médecin traitant :</td>
-                                                <td>
+
                                                     <?php if($_SESSION['datas']['id_medecin'] == 0 )
                                                     { ?>
+                                            <td>
                                                     <form method="post" accept-charset="UTF-8" role="form" name="ajoutMedecin" action="Controleur/AddMedecin.php">
                                                         <select name="medecin">
                                                             <option value="">Selectionne un médecin</option>
-                                                                <?php foreach ($medecin as $med){
-                                                                    if($med['id_medecin'] == 0)
-                                                                    {?>
-                                                                        <option value="<?php echo $med['id']; ?>"><?php echo $med['prenom'] . ' ' . $med['nom'];?> </option>
-                                                                    <?php
-                                                                    }
-
+                                                                <?php foreach ($medecin as $med)
+                                                                {
+                                                                        ?>
+                                                                        <option value="<?php echo $med['id']; ?>"><?php echo $med['prenom'] . ' ' . $med['nom']; ?> </option>
+                                                                        <?php
                                                                 }?>
                                                         </select>
 
                                                         <input class="btn btn-success" type="submit" name="login" value="Valider" style="color: white">
-                                                    </form>
-                                                    <?php } ?>
-                                                </td>
+                                                    </form></td>
+                                                    <?php }
+                                                    else {?>
+                                                        <td>
+                                                            <?php
+                                                                foreach ($informations as $info)
+                                                                {
+                                                                    echo $info['nom'] . ' ' . $info['prenom'];?>
+                                                                    <a href="blog.php?action=medecin&id=<?php echo $i['id']; ?>" class="btn btn-primary">Acceder à son profil</a>
+                                                                <?php}
+                                                            ?>
+
+                                                        </td>
+                                            <?php } ?>
+
+
                                         </tr>
 
                                     </tbody>

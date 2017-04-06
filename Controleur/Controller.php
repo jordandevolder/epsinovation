@@ -11,6 +11,7 @@ function userProfile($idUser)
 {
     $medecin = getMedecin();
     $user = UserInformation($idUser);
+    $informations = getInfoMedecinByIdUser($idUser);
     include_once('Vue/user.php');
 }
 
