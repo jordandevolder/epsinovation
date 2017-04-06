@@ -1,15 +1,11 @@
 <?php
-/**
- * Created by PhpStorm.
- * User: Jules
- * Date: 29/12/2016
- * Time: 11:29
- */
 
 define("HOST_BDD", "localhost"); // Host de la base de données
 define("NAME_BDD", "bdd"); // Nom de la base de données
 define("USER_BDD", "root"); // Identifiant pour se connecter à la base de données
 define("PASS_BDD", ""); // MDR de la base de données
+
+
 
 /*
 define("HOST_BDD", "localhost"); // Host de la base de données

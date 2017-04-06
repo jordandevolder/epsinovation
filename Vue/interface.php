@@ -46,9 +46,9 @@ function interfaceTop()
                                                                 <a class="btn btn-primary" data-toggle="modal" data-target="#inscription">S\'inscrire</a>
                                         </span>'; }
     else {
-        if ($_SESSION['datas']['nom'] == null) {
+        if ($_SESSION['datas']['nom'] != null) {
             echo '<span class="pull-right" >'. $_SESSION['datas']['nom'].' ';
-            echo '<li><a href="#"><i class="fa fa-envelope" aria-hidden="true"></i></a></li>
+                echo '<li><a href="#"><i class="fa fa-envelope" aria-hidden="true"></i></a></li>
                                                 <li>
                                                     <a href="#" class="icon-info">
                                                         <i class="fa fa-bell" aria-hidden="true"></i>
