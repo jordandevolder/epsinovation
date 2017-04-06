@@ -10,6 +10,7 @@ $prenom = "";
 $email = "";
 $password = "";
 $telephone = "";
+$role = "";
 
 if(isset($_POST['nom']))
 {
@@ -31,18 +32,22 @@ if(isset($_POST['telephone']))
 {
     $telephone = $_POST['telephone'];
 }
+if(isset($_POST['role'])) {
+    $role = $_POST['role'];
+}
 
 if(isset($_POST['register'])){
 
 
     $password = sha1($password);
 
-    $respond = $bdd->prepare("INSERT INTO user(nom, prenom, password, email, telephone) VALUES (:nom, :prenom, :password, :email, :telephone)");
+    $respond = $bdd->prepare("INSERT INTO user(nom, prenom, password, email, telephone, role) VALUES (:nom, :prenom, :password, :email, :telephone, :role)");
     $respond->execute(array(':nom' => $nom,
                             ':prenom' => $prenom,
                             ':email' => $email,
                             ':password' => $password, 
-                            ':telephone' => $telephone));
+                            ':telephone' => $telephone,
+                            ':role' => $role));
 
     echo "<script>document.location.replace('../blog.php');</script>";
 

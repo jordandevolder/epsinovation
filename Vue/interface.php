@@ -117,23 +117,35 @@ function interfaceTop()
 			    	<form method="post" accept-charset="UTF-8" enctype="multipart/form-data" role="form" name="connection" action="Controleur/Register.php">
                     <fieldset>
                         <div class="form-group">
+                        <label>Nom</label>
 			    		    <input class="form-control" placeholder="Nom" name="nom" type="text">
 			    		</div>
 			    		<div class="form-group">
+			    		<label>Prénom</label>
 			    		    <input class="form-control" placeholder="Prénom" name="prenom" type="text">
 			    		</div>
-			    		 <div class="form-group col-xs-12">
-                            Choisir une photo de profil : <input class="form-control" name="image" type="file" accept="image/*" />
-                        </div>
 			    		<div class="form-group">
+			    		<label>Téléphone</label>
 			    		    <input class="form-control" placeholder="Téléphone" name="telephone" type="number" size="10">
 			    		</div>
+                        <div class="form-group">
+                            <label>Rôle</label>
+                                        <select class="form-control" name="role">
+                                                <option value="">Selectionne un rôle</option>
+                                                <option value="patient">Patient</option>
+                                                <option value="medecin">Médecin</option>
+                                        </select>
+                                </div>
+			    		
 			    	  	<div class="form-group">
+			    	  	<label>Email</label>
 			    		    <input class="form-control" placeholder="E-mail" name="email" type="text">
 			    		</div>
 			    		<div class="form-group">
+			    		<label>Mot de Passe</label>
 			    			<input class="form-control" placeholder="Password" name="password" type="password" value="">
 			    		</div>
+			    		
 			    		<input class="btn btn-lg btn-primary btn-block" type="submit" name="register" value="S\'inscrire" style="color: #0f0f0f">
 			    	</fieldset>
 			      	</form>
