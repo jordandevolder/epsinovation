@@ -3,7 +3,6 @@
 session_start();
 include_once('../Modele/config.php');
 global $bdd;
-define('MAXSIZE', 30000000);
 
 $nom = "";
 $prenom = "";
@@ -39,15 +38,30 @@ if(isset($_POST['role'])) {
 if(isset($_POST['register'])){
 
 
-    $password = sha1($password);
 
-    $respond = $bdd->prepare("INSERT INTO user(nom, prenom, password, email, telephone, role) VALUES (:nom, :prenom, :password, :email, :telephone, :role)");
-    $respond->execute(array(':nom' => $nom,
-                            ':prenom' => $prenom,
-                            ':email' => $email,
-                            ':password' => $password, 
-                            ':telephone' => $telephone,
-                            ':role' => $role));
+
+    if($role == "patient")
+    {
+        $password = sha1($password);
+        $respond = $bdd->prepare("INSERT INTO user(nom, prenom, password, email, telephone) VALUES (:nom, :prenom, :password, :email, :telephone)");
+        $respond->execute(array(':nom' => $nom,
+            ':prenom' => $prenom,
+            ':email' => $email,
+            ':password' => $password,
+            ':telephone' => $telephone));
+    }
+    else if($role == "medecin")
+    {
+        $password = sha1($password);
+        $respond = $bdd->prepare("INSERT INTO medecin(nom, prenom, password, email, telephone) VALUES (:nom, :prenom, :password, :email, :telephone)");
+        $respond->execute(array(':nom' => $nom,
+            ':prenom' => $prenom,
+            ':email' => $email,
+            ':password' => $password,
+            ':telephone' => $telephone));
+    }
+
+
 
     echo "<script>document.location.replace('../blog.php');</script>";
 

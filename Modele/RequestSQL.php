@@ -50,3 +50,22 @@ function UserInformation($idUser) {
     $donnees = $userInformation->fetchAll();
     return $donnees;
 }
+
+function getMedecin()
+{
+    global $bdd;
+    $medecin = $bdd -> prepare("SELECT * FROM medecin");
+    $medecin->execute();
+    $donnees = $medecin->fetchAll();
+    return $donnees;
+
+}
+
+function getInfoMedecinByIdUser($idUser)
+{
+    global $bdd;
+    $information = $bdd->prepare("SELECT * FROM medecin WHERE id = (SELECT id_medecin from user where id = $idUser)");
+    $information->execute();
+    $donnees = $information->fetchAll();
+    return $donnees;
+}

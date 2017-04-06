@@ -49,7 +49,7 @@ try {
     }
     else {
         index();
-
+        //medecin();
     }
 
     include_once 'Vue/footer.php';
