@@ -9,6 +9,13 @@ function index()
 
 function userProfile($idUser)
 {
+    $medecin = getMedecin();
     $user = UserInformation($idUser);
     include_once('Vue/user.php');
+}
+
+function medecin()
+{
+    //$medecin = getMedecin();
+    //include_once('Vue/interface.php');
 }

@@ -5,7 +5,6 @@
  * Date: 05/04/2017
  * Time: 15:18
  */
-
     interfaceTop();
 
 ?>
@@ -14,13 +13,9 @@
     <div class="container">
         <div class="row">
             <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6 col-xs-offset-0 col-sm-offset-0 col-md-offset-3 col-lg-offset-3 custom-table" >
-            <?php
-                foreach ($user as $u){
-            ?>
-
                 <div class="panel panel-info">
                     <div class="panel-heading">
-                        <h3 class="panel-title"><?php echo $u['prenom'] . " " ; echo $u['nom'];?></h3>
+                        <h3 class="panel-title"><?php echo $_SESSION['datas']['prenom'] . ' ' . $_SESSION['datas']['nom']; ?></h3>
                     </div>
                     <div class="panel-body">
                         <div class="row">
@@ -37,19 +32,40 @@
                                             <td>Numéro de téléphone :</td>
                                             <td><?php echo $_SESSION['datas']['telephone'] ?></td>
                                         </tr>
+                                        <tr>
+                                                <td>Mon Médecin traitant :</td>
+                                                <td>
+                                                    <?php echo $_SESSION['datas']['id_medecin']; if($_SESSION['datas']['id_medecin'] == 0 )
+                                                    { ?>
+                                                    <form method="post" accept-charset="UTF-8" role="form" name="ajoutMedecin" action="Controleur/AddMedecin.php">
+                                                        <select name="medecin">
+                                                            <option value="">Selectionne un médecin</option>
+                                                                <?php foreach ($medecin as $med){
+                                                                    if($med['id_medecin'] == 0)
+                                                                    {?>
+                                                                        <option value="<?php echo $med['id']; ?>"><?php echo $med['prenom'] . ' ' . $med['nom'];?> </option>
+                                                                    <?php
+                                                                    }
+
+                                                                }?>
+                                                        </select>
+
+                                                        <input class="btn btn-success" type="submit" name="login" value="Valider" style="color: white">
+                                                    </form>
+                                                    <?php } ?>
+                                                </td>
+                                        </tr>
+
                                     </tbody>
                                 </table>
                             </div>
                         </div>
                     </div>
                 </div>
-            <?php
-            }
-            ?>
             </div>
         </div>
     </div>
-
+    </div>
 <?php
     interfaceBot();
 ?>

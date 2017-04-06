@@ -51,3 +51,13 @@ function UserInformation($idUser) {
     $donnees = $userInformation->fetchAll();
     return $donnees;
 }
+
+function getMedecin()
+{
+    global $bdd;
+    $medecin = $bdd -> prepare("SELECT * FROM medecin");
+    $medecin->execute();
+    $donnees = $medecin->fetchAll();
+    return $donnees;
+
+}

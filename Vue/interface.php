@@ -1,5 +1,7 @@
 <?php
 
+
+
 function interfaceTop()
 {
     echo '<script type="text/javascript" src="/Vue/bower_components/jquery/src/jquery.min.js"></script>
@@ -7,6 +9,8 @@ function interfaceTop()
   <script type="text/javascript" src="/Vue/bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
   <script type="text/javascript" src="/Vue/bower_components/eonasdan-bootstrap-datetimepicker/build/js/bootstrap-datetimepicker.min.js"></script>
   <link rel="stylesheet" href="/Vue/bower_components/eonasdan-bootstrap-datetimepicker/build/css/bootstrap-datetimepicker.min.css" /><link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-T8Gy5hrqNKT+hzMclPo118YTQO6cYprQmhrYwIiQ/3axmI1hQomh7Ud2hPOy8SP1" crossorigin="anonymous">
+  
+<link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-T8Gy5hrqNKT+hzMclPo118YTQO6cYprQmhrYwIiQ/3axmI1hQomh7Ud2hPOy8SP1" crossorigin="anonymous">
 <body class="home">
 <div class="container-fluid display-table">
     <div class="row display-table-row">
@@ -120,33 +124,29 @@ function interfaceTop()
 			  	<div class="panel-body">
 			    	<form method="post" accept-charset="UTF-8" enctype="multipart/form-data" role="form" name="connection" action="Controleur/Register.php">
                     <fieldset>
+                    <div class="form-group">
+                            <label>Mon profil</label>
+                                <select class="form-control" name="role">
+                                        <option value="patient">Patient</option>
+                                        <option value="medecin">Médecin</option>
+                                </select>
+                        </div>
                         <div class="form-group">
-                        <label>Nom</label>
 			    		    <input class="form-control" placeholder="Nom" name="nom" type="text">
 			    		</div>
 			    		<div class="form-group">
-			    		<label>Prénom</label>
 			    		    <input class="form-control" placeholder="Prénom" name="prenom" type="text">
 			    		</div>
 			    		<div class="form-group">
-			    		<label>Téléphone</label>
 			    		    <input class="form-control" placeholder="Téléphone" name="telephone" type="number" size="10">
 			    		</div>
-                        <div class="form-group">
-                            <label>Rôle</label>
-                                        <select class="form-control" name="role">
-                                                <option value="">Selectionne un rôle</option>
-                                                <option value="patient">Patient</option>
-                                                <option value="medecin">Médecin</option>
-                                        </select>
-                                </div>
+
+
 			    		
 			    	  	<div class="form-group">
-			    	  	<label>Email</label>
 			    		    <input class="form-control" placeholder="E-mail" name="email" type="text">
 			    		</div>
 			    		<div class="form-group">
-			    		<label>Mot de Passe</label>
 			    			<input class="form-control" placeholder="Password" name="password" type="password" value="">
 			    		</div>
 			    		
