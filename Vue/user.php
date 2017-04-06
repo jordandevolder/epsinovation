@@ -35,7 +35,7 @@
                                         <tr>
                                                 <td>Mon Médecin traitant :</td>
                                                 <td>
-                                                    <?php echo $_SESSION['datas']['id_medecin']; if($_SESSION['datas']['id_medecin'] == 0 )
+                                                    <?php if($_SESSION['datas']['id_medecin'] == 0 )
                                                     { ?>
                                                     <form method="post" accept-charset="UTF-8" role="form" name="ajoutMedecin" action="Controleur/AddMedecin.php">
                                                         <select name="medecin">
