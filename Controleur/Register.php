@@ -3,6 +3,7 @@
 session_start();
 include_once('../Modele/config.php');
 global $bdd;
+define('MAXSIZE', 30000000);
 
 $nom = "";
 $prenom = "";
@@ -32,6 +33,8 @@ if(isset($_POST['telephone']))
 }
 
 if(isset($_POST['register'])){
+
+
     $password = sha1($password);
 
     $respond = $bdd->prepare("INSERT INTO user(nom, prenom, password, email, telephone) VALUES (:nom, :prenom, :password, :email, :telephone)");

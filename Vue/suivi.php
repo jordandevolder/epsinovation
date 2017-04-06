@@ -15,22 +15,29 @@
 
     <html>
   <head>
-    <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
     <script type="text/javascript">
       google.charts.load('current', {'packages':['corechart']});
       google.charts.setOnLoadCallback(drawChart);
 
       function drawChart() {
-        var data = google.visualization.arrayToDataTable([
+        var data_array = <?php echo json_encode(getInjectionsReportsByDay()) ?>;
+        console.log(data_array);
+        
+        var data = google.visualization.arrayToDataTable('Heure', 'Glycémie').add(data_array);
+
+        console.log(data);
+
+         //console.log(test);
+        /*var data = google.visualization.arrayToDataTable([
           ['Heure', 'Glycemie'],
           ['2013',  1000],
           ['2014',  1170],
           ['2015',  660],
           ['2016',  1030]
-        ]);
+        ]);*/
 
         var options = {
-          title: 'graphique Glycemie',
+          title: 'Graphique Glycémie',
           hAxis: {title: 'Year',  titleTextStyle: {color: '#333'}},
           vAxis: {minValue: 0}
         };
@@ -39,11 +46,8 @@
         chart.draw(data, options);
       }
     </script>
-  </head>
-  <body>
-    <div id="chart_div" style="width: 100%; height: 500px;"></div>
-  </body>
-</html>
+
+    <div id="chart_div" style="width: 100%; height: "></div>
 
     <hr />
 

@@ -16,6 +16,7 @@ function interfaceTop()
                     </li>
                     <li id="blog-link"><a href="blog.php"><i class="fa fa-home" aria-hidden="true"></i><span class="hidden-xs hidden-sm">Accueil</span></a></li>
                     <li id="suivi-link"><a href="blog.php?action=suivi"><i class="fa fa-bar-chart" aria-hidden="true"></i><span class="hidden-xs hidden-sm">Mon Suivi</span></a></li>
+                    <li id="planif-link"><a href="blog.php?action=planif"><i class="fa fa-calendar" aria-hidden="true"></i><span class="hidden-xs hidden-sm">Planification</span></a></li>
                     <li id="user-link"><a href="blog.php?action=user"><i class="fa fa-user" aria-hidden="true"></i><span class="hidden-xs hidden-sm">Gestion du compte</span></a></li>
                     <li id="mentions-link"><a href="blog.php?action=mentions"><i class="fa fa-file-text-o" aria-hidden="true"></i><span class="hidden-xs hidden-sm">Mentions légales</span></a></li>
                     <li><span class="centered-copyright">&copy; 2017 EPSInnovation</span></li>
@@ -47,7 +48,7 @@ function interfaceTop()
                                         </span>'; }
     else {
         if ($_SESSION['datas']['nom'] != null) {
-            echo '<span class="pull-right" >'. $_SESSION['datas']['nom'].' '.$_SESSION['datas']['prenom'];
+            echo '<span class="pull-right" >'. $_SESSION['datas']['nom'].' ';
             echo ' <a class="btn btn-warning" href="blog.php?action=disconnect">Deconnexion</a></span>';
         }
     }echo '</a>
@@ -113,7 +114,7 @@ function interfaceTop()
       <div class="modal-body">
     		<div class="panel panel-default">
 			  	<div class="panel-body">
-			    	<form method="post" accept-charset="UTF-8" role="form" name="connection" action="Controleur/Register.php">
+			    	<form method="post" accept-charset="UTF-8" enctype="multipart/form-data" role="form" name="connection" action="Controleur/Register.php">
                     <fieldset>
                         <div class="form-group">
 			    		    <input class="form-control" placeholder="Nom" name="nom" type="text">
@@ -121,6 +122,9 @@ function interfaceTop()
 			    		<div class="form-group">
 			    		    <input class="form-control" placeholder="Prénom" name="prenom" type="text">
 			    		</div>
+			    		 <div class="form-group col-xs-12">
+                            Choisir une photo de profil : <input class="form-control" name="image" type="file" accept="image/*" />
+                        </div>
 			    		<div class="form-group">
 			    		    <input class="form-control" placeholder="Téléphone" name="telephone" type="number" size="10">
 			    		</div>
