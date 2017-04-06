@@ -10,8 +10,7 @@
 ?>
     <h1>Suivi de ma glycémie</h1>
     <?php
-        getInjectionsReportsByDay();
-
+        var_dump(getInjectionsReportsByDay());
     ?>
 
     <hr />
