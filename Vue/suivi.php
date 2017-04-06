@@ -13,37 +13,41 @@
       var_dump(getInjectionsReportsByDay());
     ?>
 
-    <html>
-  <head>
     <script type="text/javascript">
       google.charts.load('current', {'packages':['corechart']});
       google.charts.setOnLoadCallback(drawChart);
 
       function drawChart() {
         var data_array = <?php echo json_encode(getInjectionsReportsByDay()) ?>;
-        console.log(data_array);
-        
-        var data = google.visualization.arrayToDataTable('Heure', 'Glycémie').add(data_array);
 
-        console.log(data);
+        var data = new google.visualization.DataTable();
+        data.addColumn('string', 'Heure');
+        data.addColumn('number', 'Valeur');
 
-         //console.log(test);
-        /*var data = google.visualization.arrayToDataTable([
-          ['Heure', 'Glycemie'],
-          ['2013',  1000],
-          ['2014',  1170],
-          ['2015',  660],
-          ['2016',  1030]
-        ]);*/
+          for(var i = 0; i < data.length; i++) {
+              data.addRows([
+                  [data_array[i][0], Number(data_array[i][1])],
+              ]);
+              console.log(data_array[i][0]);
+              console.log(data_array[i][1]);
+          }
 
-        var options = {
-          title: 'Graphique Glycémie',
-          hAxis: {title: 'Year',  titleTextStyle: {color: '#333'}},
-          vAxis: {minValue: 0}
-        };
+          console.log(data.length);
+          console.log(data);
 
-        var chart = new google.visualization.AreaChart(document.getElementById('chart_div'));
-        chart.draw(data, options);
+          /*var data = google.visualization.arrayToDataTable([
+            ['Heure', 'Glycemie'],
+            ['2013',  1000]
+          ]);*/
+
+          var options = {
+            title: 'Graphique Glycémie',
+            hAxis: {title: 'Year',  titleTextStyle: {color: '#333'}},
+            vAxis: {minValue: 0}
+          };
+
+          var chart = new google.visualization.AreaChart(document.getElementById('chart_div'));
+          chart.draw(data, options);
       }
     </script>
 
