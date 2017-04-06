@@ -58,8 +58,9 @@
                                                                 foreach ($informations as $info)
                                                                 {
                                                                     echo $info['nom'] . ' ' . $info['prenom'];?>
-                                                                    <a href="blog.php?action=medecin&id=<?php echo $i['id']; ?>" class="btn btn-primary">Acceder à son profil</a>
-                                                                <?php}
+                                                                    <a href="blog.php?action=medecin&id=<?php echo $info['id']; ?>" class="btn btn-primary">Acceder à son profil</a>
+                                                                <?php
+                                                                }
                                                             ?>
 
                                                         </td>
