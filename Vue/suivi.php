@@ -9,9 +9,6 @@
     interfaceTop();
 ?>
     <h1>Suivi de ma glycémie</h1>
-    <?php
-      var_dump(getInjectionsReportsByDay());
-    ?>
 
     <script type="text/javascript">
       google.charts.load('current', {'packages':['corechart']});
@@ -24,30 +21,20 @@
         data.addColumn('string', 'Heure');
         data.addColumn('number', 'Valeur');
 
-          for(var i = 0; i < data.length; i++) {
-              data.addRows([
-                  [data_array[i][0], Number(data_array[i][1])],
-              ]);
-              console.log(data_array[i][0]);
-              console.log(data_array[i][1]);
-          }
+        for(var i = 0; i < data_array.length; i++) {
+            data.addRows([
+                [data_array[i][0], Number(data_array[i][1])],
+            ]);
+        }
 
-          console.log(data.length);
-          console.log(data);
+        var options = {
+          title: 'Evolution de ma glycémie',
+          hAxis: {title: 'Year',  titleTextStyle: {color: '#333'}},
+          vAxis: {minValue: 0}
+        };
 
-          /*var data = google.visualization.arrayToDataTable([
-            ['Heure', 'Glycemie'],
-            ['2013',  1000]
-          ]);*/
-
-          var options = {
-            title: 'Graphique Glycémie',
-            hAxis: {title: 'Year',  titleTextStyle: {color: '#333'}},
-            vAxis: {minValue: 0}
-          };
-
-          var chart = new google.visualization.AreaChart(document.getElementById('chart_div'));
-          chart.draw(data, options);
+        var chart = new google.visualization.AreaChart(document.getElementById('chart_div'));
+        chart.draw(data, options);
       }
     </script>
 
