@@ -63,7 +63,7 @@ interfaceTop();
                                                     <?php
                                                 }
                                                 ?>
-
+                                                <span class=""><a class="btn btn-primary" data-toggle="modal" data-target="#contact">Contacter</a></span>
                                             </td>
                                         <?php } ?>
 
@@ -83,52 +83,55 @@ interfaceTop();
 </div>
 
 
+<div id="contact" class="modal fade" role="dialog">
+    <div class="modal-dialog">
+        <!-- Modal content-->
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" style="color: #000000" data-dismiss="modal">&times;</button>
+                <h4 class="modal-title">Contact</h4>
+            </div>
+            <div class="modal-body">
+                <div class="panel panel-default">
+                    <div class="panel-body">
+
+                                <form method="post" id="contact" name="test" enctype="multipart/form-data" action="Controleur/envoi.php">
+                                    <fieldset>
+                                        <div class="form-group">
+                                            <label for="nom-field">Nom</label>
+                                            <input id="nom-field" class="form-control" placeholder="Nom" name="nom" type="text">
+                                        </div>
+                                        <div class="form-group">
+                                            <label for="email-field">Email</label>
+                                            <input id="email-field" class="form-control" placeholder="E-mail" name="email" type="text">
+                                        </div>
+
+                                        <div class="form-group">
+                                            <label for="objet-field">Objet</label>
+                                            <input id="objet-field" class="form-control" placeholder="Objet" name="objet" type="text">
+                                        </div>
+
+                                    <div class="form-group">
+                                        <label for="message-field">Message</label>
+                                            <textarea id="message-field" class="form-control" name="message" tabindex="4" cols="30" rows="8"></textarea>
+                                    </div>
+
+
+                                    <input class="btn btn-primary col-xs-12" name="envoi" value="Envoyer le message" type="submit" >
+                                    </fieldset>
+                                </form>
+                            </div>
 
 
 
-<div class="container" id="contact">
-    <div class="row">
-        <h2>Contacte nous ! </h2>
-    </div>
-    <div class="row">
-            <form method="post" id="contact" name="test" enctype="multipart/form-data" action="vue/envoi.php">
-                <div class="form-group">
-                    <label for="validate-text">Nom</label>
-                    <div class="input-group">
-                        <input type="text" class="form-control"  id="nom" name="nom" tabindex="1" required/>
-                        <span class="input-group-addon danger"><span class="glyphicon glyphicon-remove"></span></span>
                     </div>
                 </div>
-
-                <div class="form-group">
-                    <label for="validate-email">Email</label>
-                    <div class="input-group">
-                        <input type="email" class="form-control"  id="email" name="email" tabindex="2" required/>
-                        <span class="input-group-addon danger"><span class="glyphicon glyphicon-remove"></span></span>
-                    </div>
-                </div>
-
-                <div class="form-group">
-                    <label for="validate-text">Objet</label>
-                    <div class="input-group">
-                        <input type="text" class="form-control" id="objet" name="objet" tabindex="3" required/>
-                        <span class="input-group-addon danger"><span class="glyphicon glyphicon-remove"></span></span>
-                    </div>
-                </div>
-
-                <div class="form-group">
-                    <label for="validate-text">Message</label>
-                    <div class="input-group">
-                        <!--input type="text" class="form-control" id="objet" name="objet" tabindex="3" required/-->
-                        <textarea id="validate-text" class="form-control" name="message" tabindex="4" cols="30" rows="8"></textarea>
-                        <span class="input-group-addon primary"></span>
-                    </div>
-                </div>
-
-                <input class="btn btn-primary col-xs-12" name="envoi" value="Envoyer le message" type="submit" >
-            </form>
+            </div>
         </div>
+    </div>
 </div>
+
+
 
 
 <?php
