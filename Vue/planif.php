@@ -11,38 +11,47 @@
 
 
 <h1>Planification</h1>
+<h4> Date de l'injection </h4>
 
-    <h4> Date de l'injection </h4>
-    <div class="row">
-        <div class='col-sm-3'>
-            <div class="form-group">
-                <div class='input-group date' id='datetimepicker1'>
-                    <input type='text' class="form-control" name="dateplanif" />
+<br><br>
+
+<div class="container">
+    <h2> Planification </h2>
+    <form action="Controleur/Planification.php" method="POST">
+        <div class="row">
+            <div class="col-sm-6">
+                <div class="form-group">
+                    <label for="datetimepicker1">Date :</label>
+                    <div class='input-group date' id='datetimepicker1'>
+                        <input name="dateplanif" type='text' class="form-control" />
                         <span class="input-group-addon">
-                            <span class="fa fa-calendar"></span>
-                        </span>
+                        <span class="glyphicon glyphicon-calendar"></span>
+                    </span>
+                    </div>
+                </div>
+            </div>
+            <script type="text/javascript">
+                $(function () {
+                    $('#datetimepicker1').datetimepicker();
+                });
+            </script>
+        </div>
+
+
+        <div class="row">
+            <div class="col-sm-6">
+                <div class="form-group">
+                    <label for="qte">Quantité insuline :</label>
+                    <input name="qteinsuline" type="number" class="form-control" id="qte" placeholder="Quelle est la dose du jour séléctionné ?">
                 </div>
             </div>
         </div>
-        <script type="text/javascript">
-            $(function () {
-                $('#datetimepicker1').datetimepicker({
 
-                });
-            });
-        </script>
-    </div>
+        <button type="submit" class="btn btn-default">Submit</button>
 
-    <h4> Dose à injecter </h4>
-    <div class="row">
-        <div class='col-sm-3'>
-            <input type="number" step="any" name="valeurinsuline"/>
-        </div>
-    </div>
+    </form>
+</div>
 
-    <div class="row">
-        <a class="btn btn-primary" data-toggle="modal" data-target="#planif">Valider la planification</a>
-    </div>
 
 <?php
 
