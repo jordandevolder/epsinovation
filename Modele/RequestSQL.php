@@ -21,8 +21,7 @@ function indexTest() {
 function getInjectionsReportsByDay() {
     if(isset($_SESSION['datas']['id'])) {
         global $bdd;
-        //$currentDate = date('Y-m-d H:i:s');
-        $query = $bdd->prepare("SELECT heure, valeur FROM reportinjection WHERE user_id=:id");
+        $query = $bdd->prepare("SELECT heure, valeur FROM reportinjection WHERE user_id=:id AND DATE(heure) = DATE(NOW())");
         $query->execute(array(':id' => $_SESSION['datas']['id']));
         $answer=$query->fetchAll();
         return $answer;
@@ -34,7 +33,7 @@ function getInjectionsReportsByDay() {
 function getGlycemieReportsByDay() {
     if(isset($_SESSION['datas']['id'])) {
         global $bdd;
-        $query = $bdd->prepare("SELECT * FROM reportinjection WHERE id=:id");
+        $query = $bdd->prepare("SELECT heure, valeur FROM reportglycemie WHERE user_id=:id AND DATE(heure) = DATE(NOW())");
         $query->execute(array(':id' => $_SESSION['datas']['id']));
         $answer=$query->fetchAll();
         return $answer;

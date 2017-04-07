@@ -30,6 +30,14 @@ li,ul{
 .btn-primary,
 .btn-warning {
     border-radius: 0;
+    color: white!important;
+}
+.btn.btn-primary.margin-btn-planif {
+    margin-top: 20px;
+    margin-left: 15px;
+}
+.table.table-user-information .btn-primary {
+    margin-left: 20px;
 }
 .header-top i {
     font-size: 18px;

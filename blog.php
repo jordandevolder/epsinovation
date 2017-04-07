@@ -45,7 +45,11 @@ try {
         }
 
         if ($_GET['action'] == 'planif'){
-            include_once('Vue/planif.php');
+            if (isset($_SESSION['datas']['id'])) {
+                include_once('Vue/planif.php');
+            } else {
+                include_once('Vue/connection.php');
+            }
         }
 
         else if($_GET['action'] == 'disconnect'){ // Si il n'y a pas d'ID
@@ -55,7 +59,11 @@ try {
             include_once('Vue/mentionsLegales.php');
         }
         else if($_GET['action'] == 'suivi') {
-            include_once('Vue/suivi.php');
+            if (isset($_SESSION['datas']['id'])) {
+                include_once('Vue/suivi.php');
+            } else {
+                include_once('Vue/connection.php');
+            }
         }
     }
     else {
