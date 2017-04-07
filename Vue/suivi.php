@@ -8,7 +8,7 @@
 
     interfaceTop();
 ?>
-    <h1>Suivi de ma glycémie</h1>
+    <h1>Suivi des injections d'insuline</h1>
 
     <script type="text/javascript">
       google.charts.load('current', {'packages':['corechart']});
@@ -44,7 +44,7 @@
 
     <hr />
 
-    <h1>Suivi des injections d'insuline</h1>
+    <h1>Suivi de ma glycémie</h1>
 
     <script type="text/javascript">
         google.charts.load('current', {'packages':['corechart']});

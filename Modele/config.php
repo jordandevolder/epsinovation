@@ -1,10 +1,10 @@
 <?php
 
-define("HOST_BDD", "localhost:8889"); // Host de la base de données
+/*define("HOST_BDD", "localhost:8889"); // Host de la base de données
 define("NAME_BDD", "epsinovation"); // Nom de la base de données
 define("USER_BDD", "root"); // Identifiant pour se connecter à la base de données
-define("PASS_BDD", "root"); // MDR de la base de données
-/*
+define("PASS_BDD", "root"); // MDR de la base de données*/
+
 
 define("HOST_BDD", "localhost"); // Host de la base de données
 define("NAME_BDD", "u120688453_enov"); // Nom de la base de données
