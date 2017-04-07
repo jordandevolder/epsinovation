@@ -21,8 +21,10 @@ if(isset($_POST['login'])) {
     $respond = $bdd->prepare("SELECT * FROM user WHERE email = :email");
     $respond->execute(array(':email' => $email));
     $donnees=$respond->fetch();
+
     $connected = 1;
-    while ($donnees && $connected != 2) {
+
+    while ($donnees  && $connected != 2) {
         $password = sha1($password);
         if($password == $donnees['password'])
         {

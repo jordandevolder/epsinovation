@@ -22,7 +22,7 @@ function getInjectionsReportsByDay() {
     if(isset($_SESSION['datas']['id'])) {
         global $bdd;
         //$currentDate = date('Y-m-d H:i:s');
-        $query = $bdd->prepare("SELECT * FROM reportinjection WHERE user_id=:id");
+        $query = $bdd->prepare("SELECT heure, valeur FROM reportinjection WHERE user_id=:id");
         $query->execute(array(':id' => $_SESSION['datas']['id']));
         $answer=$query->fetchAll();
         return $answer;
@@ -49,5 +49,24 @@ function UserInformation($idUser) {
     $userInformation = $bdd -> prepare("SELECT * FROM user WHERE id = ".$idUser);
     $userInformation->execute();
     $donnees = $userInformation->fetchAll();
+    return $donnees;
+}
+
+function getMedecin()
+{
+    global $bdd;
+    $medecin = $bdd -> prepare("SELECT * FROM medecin");
+    $medecin->execute();
+    $donnees = $medecin->fetchAll();
+    return $donnees;
+
+}
+
+function getInfoMedecinByIdUser($idUser)
+{
+    global $bdd;
+    $information = $bdd->prepare("SELECT * FROM medecin WHERE id = (SELECT id_medecin from user where id = $idUser)");
+    $information->execute();
+    $donnees = $information->fetchAll();
     return $donnees;
 }
