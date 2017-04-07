@@ -62,6 +62,16 @@ function getMedecin()
 
 }
 
+function getMedecinById($idMedecin)
+{
+    global $bdd;
+    $medecin = $bdd -> prepare("SELECT * FROM medecin WHERE id = ".$idMedecin);
+    $medecin->execute();
+    $donnees = $medecin->fetchAll();
+    return $donnees;
+
+}
+
 function getInfoMedecinByIdUser($idUser)
 {
     global $bdd;

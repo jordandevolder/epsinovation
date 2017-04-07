@@ -15,8 +15,8 @@ function userProfile($idUser)
     include_once('Vue/user.php');
 }
 
-function medecin()
+function medecinProfile($idMedecin)
 {
-    //$medecin = getMedecin();
-    //include_once('Vue/interface.php');
+    $medecin = getMedecinById($idMedecin);
+    include_once('Vue/medecin.php');
 }

@@ -23,9 +23,6 @@ try {
             }
         }
         if ($_GET['action'] == 'user') { // On récupère le nom de l'action
-            /*if() {
-
-            }*/
             if (isset($_SESSION['datas']['id'])) { // Si un Id est passé en param on le récupère pour le param de la requete
                 $idUser = intval($_SESSION['datas']['id']);
                 if ($idUser != 0) {
@@ -36,6 +33,17 @@ try {
                 include_once('Vue/connection.php');
             }
         }
+
+        if ($_GET['action'] == 'medecin') { // On récupère le nom de l'action
+            if (isset($_GET['id'])) { // Si un Id est passé en param on le récupère pour le param de la requete
+                $idMedecin = intval($_GET['id']);
+                if ($idMedecin != 0) {
+                    medecinProfile($idMedecin);
+                }
+                include_once('Vue/medecin.php');
+            }
+        }
+
         if ($_GET['action'] == 'planif'){
             include_once('Vue/planif.php');
         }
