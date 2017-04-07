@@ -47,7 +47,6 @@ interfaceTop();
                                                                     <?php
                                                                 } ?>
                                                             </select>
-
                                                             <input class="btn btn-success" type="submit" name="login" value="Valider" style="color: white">
                                                         </form></td>
                                                 <?php }
@@ -57,7 +56,7 @@ interfaceTop();
                                                         foreach ($informations as $info)
                                                         {
                                                             echo $info['nom'] . ' ' . $info['prenom'];?>
-                                                            <a href="blog.php?action=medecin&id=<?php echo $i['id']; ?>" class="btn btn-primary">Acceder à son profil</a>
+                                                            <a href="blog.php?action=medecin&id=<?php echo $info['id']; ?>" class="btn btn-primary">Acceder à son profil</a>
                                                         <?php }
                                                         ?>
 
